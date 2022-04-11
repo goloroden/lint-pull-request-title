@@ -1,0 +1,15 @@
+name: Lint pull request title
+description: Lints pull request titles and makes sure they follow the conventional commit rules
+branding:
+  icon: shield
+  color: green
+on: [
+  pull_request
+]
+inputs:
+  allowed-pull-request-types:
+    description: Comma separated list of allowed pull request types (e.g. chore,feat,fix)
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
